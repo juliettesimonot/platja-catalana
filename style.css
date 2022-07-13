@@ -1,0 +1,757 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+
+
+/**********************--------HEADER-----------*******************/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 999999;
+    box-shadow: 2px 2px 10px rgb(227, 227, 227);
+}
+
+
+/*-------logo-------*/
+.logo a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1em, 1.1vw, 1.2em);
+}
+
+.logo a{
+    color: black;
+    text-decoration: none;
+}
+
+.logo img{
+    width: 30px;
+}
+
+
+/*---------profil picture--------*/
+
+.profil-picture img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 0.5px solid black;
+}
+
+/*---------nav--------*/
+
+.icon-toggle{
+    cursor: pointer;
+    width: 30px;
+}
+
+.menu-toggle nav{
+    display: none;
+    opacity: 0;
+}
+
+.menu-toggle nav ul{
+    padding: 0;
+    list-style: none;
+}
+
+.menu-toggle nav ul li a{
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    line-height: 2;   
+}
+
+.menu-toggle nav ul li a:hover{
+    color: white;
+    opacity: 1;
+    text-decoration: underline;
+    line-height: 2;   
+}
+
+.menu-toggle nav.is-visible{
+    display: block;
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-top: 80px;
+    padding: 15px;
+    background-color: #749C75;
+    text-align: center;
+}
+
+
+/**********************--------FOOTER-----------*******************/
+footer{
+    background-color: #3D5A80;
+    padding: 15px;
+    text-align: center;
+}
+
+footer .logo h1{
+    color: white;
+}
+
+footer nav{
+    margin-top: 15px;
+}
+
+footer nav ul{
+    padding: 0;
+    list-style: none;
+}
+
+footer nav ul a{
+   color: white;
+   text-decoration: none;
+   opacity: 50%;
+   line-height: 2;
+   font-size: clamp(0.6em, 1vw, 0.8em);
+}
+
+footer nav ul a:hover{
+    color: white;
+    text-decoration: underline;
+    opacity: 1000%;
+    font-size: clamp(0.6em, 1vw, 0.8em);
+ }
+
+/**********************--------MAIN ACCUEIL-----------*******************/
+/**********************--------MOBILE-----------*******************/
+
+
+/*------video------*/
+.accueil-video{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.video-container{
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container video{
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+/*------article ------*/
+
+/*-----presentation-----*/
+
+.presentation{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.presentation h2{
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-size: clamp(1em, 1.5vw, 2.3em);
+}
+
+.presentation p{
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(0.8em, 1.2vw, 1.8em);
+}
+
+.presentation p span{
+    font-weight: 400;
+    font-size: clamp(0.6em, 1vw, 1.6em);
+}
+
+
+/*-----maison-----*/
+
+.maison{
+    background-color: #f0e8dd;
+    padding: 20px 15%;
+}
+
+.card{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 4px 2px 10px rgb(170, 170, 170);
+    margin-bottom: 15px;
+}
+
+.card .image-container{
+    width: 100%;
+    min-height: 250px;
+    height: 250px;
+    overflow: hidden;
+   
+}
+
+.card .image-container img{
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.card .maison-descriptif{
+   display: flex;
+   justify-content: space-between;
+}
+
+
+.card .maison-descriptif .descriptif-texte{
+    padding: 15px;
+    width: 65%;
+}
+
+.card .maison-descriptif .descriptif-texte h4{
+    font-size: clamp(0.8em, 1vw, 1em);
+    padding-bottom: 5px;
+}
+
+.card .maison-descriptif .descriptif-texte p{
+    font-size: clamp(0.6em, 0.8vw, 0.8em);
+    opacity: 0.6;
+}
+
+.card .maison-descriptif .descriptif-prix-bouton{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.card .maison-descriptif .descriptif-prix-bouton p{
+    font-size: clamp(0.8em, 1vw, 1em);
+}
+
+.card .maison-descriptif .descriptif-prix-bouton p span{
+    font-weight: 600;
+}
+
+.card .maison-descriptif .descriptif-prix-bouton button{
+    padding: 5px;
+    background-color: white;
+    border: 1px solid #749C75;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.card .maison-descriptif .descriptif-prix-bouton button a{
+    color: #749C75;
+    text-decoration: none;
+}
+
+.card .maison-descriptif .descriptif-prix-bouton button:hover{
+    background-color: #749C75; 
+}
+
+.card .maison-descriptif .descriptif-prix-bouton button:hover a{
+    color: white;
+}
+
+
+
+/*------section reseaux ------*/
+.reseaux{
+    padding: 30px 15%;
+
+}
+
+
+.reseaux ul{
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.reseaux li{
+   /*width: 20%;*/
+   height: 130px;
+}
+
+.reseaux li img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+
+ .reseaux h3{
+    text-align: center;
+    padding: 15px;
+    text-decoration: underline;
+    font-weight: 400;
+ }
+
+ .reseaux h3 a{
+    color: black;
+ }
+
+ .reseaux h3 a:hover{
+    font-weight: 600;
+ }
+
+
+
+ /*------ article newletter ------*/
+
+ .newsletter{
+    background: url(./images/photos/photo-newsletter3.jpg) no-repeat ;
+    background-size: cover;
+    padding: 30px 15%;
+ }
+
+ .newsletter form{
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+ }
+
+ .newsletter form h4{
+    font-weight: 400;
+    font-size: clamp(0.8em, 1vw, 1vw);
+    padding: 10px;
+ }
+
+ .newsletter form h3{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: clamp(2em, 2vw, 2.2vw);
+    padding: 10px;
+ }
+
+ .newsletter input{
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+ }
+
+ .newsletter input::placeholder{
+    text-align: center;
+
+ }
+
+ .newsletter button{
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid #749C75;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #749C75;
+    width: fit-content;
+    margin: 0 auto;
+ }
+
+ .newsletter button:hover{
+    background-color: #749C75;
+    border: 1px solid #749C75;
+    color:white;
+ }
+
+ .newsletter p{
+    padding-top: 30px;
+    text-align: justify;
+    opacity: 0.5;
+    font-size: clamp(0.6em, 0.8vw, 0.8em);
+ }
+
+ .newsletter p a{
+    color: black;
+ }
+
+
+
+
+
+ /**********************--------DESKTOP-----------*******************/
+
+ @media(min-width: 850px){
+    /*------video------*/
+    .accueil-video{
+        height: 70vh;
+    }
+
+    /*-----maison-----*/
+
+    .maison{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 50px;
+    }
+
+    .card .image-container{
+        width: 100%;
+        min-height: 250px;
+        height: 350px;
+        overflow: hidden;
+       
+    }
+
+
+    /*------section reseaux ------*/
+    .reseaux{
+        padding: 40px 30%;
+    }
+
+    .reseaux li{
+        min-width: 150px;
+        height: 230px;
+     }
+
+
+     /*------ article newletter ------*/
+
+    .newsletter{
+        padding: 40px 30%;
+    }
+
+    .newsletter form{
+        background-color: white;
+        padding: 100px 30px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+ }
+
+
+
+
+ /**********************--------MAIN MAISON-----------*******************/
+/**********************--------MOBILE-----------*******************/
+.h1-desktop, .photo-bg, .img-desktop-hide{
+    display: none;
+}
+
+
+.main-maison .main-article-container{
+    padding: 100px 30px 20px;
+}
+
+.main-maison h1{
+    text-align: center;
+    font-weight: 700;
+    font-size: clamp(1.8em, 2vw, 2em);
+    margin-bottom: 15px;
+}
+ 
+
+/*-----article photos----*/
+
+.main-maison article{
+    width: 100%;
+    
+}
+
+.main-maison article img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+
+/*-----aside-----*/
+
+/*----card tarif--*/
+.card-tarif{
+    padding: 15px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgb(227, 227, 227);
+    margin-bottom: 15px;
+}
+
+.card-tarif .tarif-bouton{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-tarif .tarif-bouton h3{
+  font-weight: 400;
+}
+
+.card-tarif .tarif-bouton h3 span{
+    font-weight: 600;
+}
+
+.card-tarif .tarif-bouton button{
+    padding: 5px 10px;
+    background-color:#3772FF;
+    border: 1px solid #3772FF; 
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.card-tarif .tarif-bouton button a{
+   color: white;
+   text-decoration: none;
+}
+
+.card-tarif .tarif-bouton button:hover{
+    background-color:white;
+}
+
+.card-tarif .tarif-bouton button:hover a{
+   color: #3772FF;
+}
+
+
+.card-tarif .selection-date{
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-arrivee, .input-depart, .input-voyageurs{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*----card descriptif--*/
+
+.main-maison aside .descriptif{
+    padding-top: 20px;
+}
+
+.main-maison aside .descriptif h2{
+    font-size: clamp(1.3em, 1.2vw, 1.5em);
+    margin: 15px 0;
+}
+
+.main-maison aside .descriptif hr{
+    margin: 30px 0;
+}
+
+.main-maison aside .descriptif p{
+    font-size: clamp(0.8em, 1vw, 1em);
+}
+
+.main-maison aside .descriptif h4{
+    font-size: clamp(1em, 1vw, 1.2em);
+    margin: 10px 0;
+}
+
+
+/**********************--------Desktop-----------*******************/
+@media(min-width: 850px){
+    .h1-mobile{
+        display: none;
+    }
+
+    .h1-desktop{
+        display: block;
+        padding-bottom: 20px;
+    }
+
+    .main-maison{
+        padding: 0;
+    }
+
+    .main-maison .photo-bg{
+        display: block;
+        background: url("./images/photos/maison 1/photo_piscine1.jpeg") no-repeat;
+        background-size: cover;
+        height: 30vw;
+    }
+
+    .main-article-container{
+        display: flex;
+        flex-direction: row-reverse;
+        column-gap: 60px;
+        padding: 100px 15% !important;
+    }
+
+
+}
+
+
+
+
+ /**********************--------MAIN ALENTOURS----------*******************/
+/**********************--------MOBILE-----------*******************/
+.photo-top{
+    height: 60vw;
+    width: 100%;
+    overflow: hidden;
+}
+
+.photo-top img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*----article-----*/
+.main-alentours article{
+    padding: 30px 10% 0;
+}
+
+.main-alentours article p{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: clamp(1em, 1vw, 1.3em);
+}
+
+.main-alentours ul{
+    padding: 0;
+    list-style: none;
+    padding-botton: 20px;
+}
+
+.main-alentours article ul li{
+   width: 100%;
+   height: 230px;
+   overflow: hidden;
+   margin-bottom: 30px;
+}
+
+.main-alentours article ul li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+ .main-alentours article ul li h3{
+    display: none;
+    z-index: 99999;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    color: #3772FF;
+ }
+
+ .main-alentours article ul li:hover h3{
+   display: block;
+ }
+
+ .main-alentours article ul li:hover img{
+    opacity: 0.6;
+  }
+ 
+
+
+
+/*----aside----*/
+.main-alentours aside{
+    padding: 0px 10% 30px;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+}
+
+.main-alentours aside p{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: clamp(1em, 1vw, 1.2em);
+}
+
+.main-alentours aside ul{
+    width: 80%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    column-gap: 15px;
+ }
+
+
+.main-alentours aside ul li{
+   column-gap: 15px;
+   width: 100%;
+   height: 110px;
+   overflow: hidden;
+
+}
+
+.main-alentours aside ul li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+
+
+ /**********************--------DESKTOP-----------*******************/
+
+ @media(min-width: 850px){
+
+    .photo-top{
+        height: 30vw;
+    }
+
+
+    /*--article--*/
+    .main-alentours article ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 15px;
+        padding: 20px 0;
+    }
+
+    .main-alentours article ul li{
+        height: 350px;
+     }
+
+
+     /*---aside---*/
+     /*----aside----*/
+     .main-alentours aside ul{
+        width: 45%;
+    }
+ 
+
+    .main-alentours aside ul li{
+       height: 200px;
+     }
+
+}

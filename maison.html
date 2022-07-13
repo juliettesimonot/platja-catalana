@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platja Catalana</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="menu-toggle">
+        <img
+          class="icon-toggle"
+          src="./images/icones/menu.png"
+          alt="menu-toggle"
+        />
+        <nav>
+          <ul>
+            <li><a href="#">Les maisons</a></li>
+            <li><a href="#">Découvrir les alentours</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="logo">
+        <a href="accueil.html"
+          ><img src="./images/logo.png" alt="logo" />
+          <h1>Platja Catalana</h1></a
+        >
+      </div>
+      <div class="profil-picture">
+        <img
+          src="./images/photos/photo_compte_personne.jpeg"
+          alt="photo-profil"
+        />
+      </div>
+    </header>
+    <main class="main-maison">
+      <div class="photo-bg"></div>
+      <div class="main-article-container">
+        <h1 class="h1-mobile">Casa Aigua Xelida</h1>
+        <article>
+          <img class="img-desktop-hide"
+            src="./images/photos/maison 1/photo_piscine1.jpeg"
+            alt="piscine"
+          />
+          <img
+            src="./images/photos/maison 1/photo_chambre1.jpeg"
+            alt="chambre"
+          />
+          <img src="./images/photos/maison 1/photo_salon1.jpeg" alt="salon" />
+        </article>
+        <aside>
+          <h1 class="h1-desktop">Casa Aigua Xelida</h1>
+          <section class="card-tarif">
+            <div class="tarif-bouton">
+              <h3><span>275€</span> / nuit</h3>
+              <button><a href="#">Réserver</a></button>
+            </div>
+            <form action="" class="selection-date">
+              <div class="input-arrivee">
+                <label for="date-arrivee">Date arrivée</label>
+                <input type="date" name="" id="date-arrivee" />
+              </div>
+              <div class="input-depart">
+                <label for="date-depart">Date départ</label>
+                <input type="date" name="" id="date-depart" />
+              </div>
+
+              <div class="input-voyageurs">
+                <label for="nombre-voyageurs">Voyageurs</label>
+                <input
+                  type="number"
+                  name=""
+                  id="nombre-voyageurs"
+                  placeholder="2"
+                  min="1"
+                  max="8"
+                />
+              </div>
+            </form>
+          </section>
+          <section class="descriptif">
+            <h2>Bienvenue à la Casa Aigua Xelida</h2>
+            <p>
+              Perchée au milieu des oliviers et orangers. La décoration à la
+              simplicité pleine d’élégance est source de sérénité et de
+              déconnexion totale.
+            </p>
+            <hr />
+            <h4>Chambre</h4>
+            <p>3 chambres - lit double</p>
+            <h4>Serives</h4>
+            <p>piscine - garage - cusine équipée</p>
+          </section>
+        </aside>
+      </div-main-article-container>
+    </main>
+    <footer>
+      <div class="logo">
+        <img src="./images/logo_blanc_bleu.png" alt="logo" />
+        <h1>Platja Catalana</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Conditions de vente</a></li>
+          <li><a href="#">Politiques de confidentialité</a></li>
+          <li><a href="#">Platja Catalana</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="config.js"></script>
+  </body>
+</html>
